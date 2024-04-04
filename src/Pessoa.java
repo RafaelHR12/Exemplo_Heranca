@@ -3,11 +3,9 @@ public class Pessoa {
 
 	// Encapsulamento de Atributos;
 	private String name;
-	private int idade;
-	private String cpf;
-
-	// Getters (Método para acessar os valores) e Setter (Método para modificar os
-	// valores);
+	private String endereco;
+	
+	// Getters (Método para acessar os valores) e Setter (Método para modificar os valores);
 	public String getName() {
 		return name;
 	}
@@ -19,28 +17,14 @@ public class Pessoa {
 		}
 		return false;
 	}
-
-	public int getIdade() {
-		return idade;
+	
+	public String getEndereco() {
+		return endereco;
 	}
-
-	public boolean setIdade(int idade) {
-		if (idade > 0) {
-			this.idade = idade;
-			return true;
-		}
-		return false;
-	}
-
-	public String getCpf() {
-		return cpf;
-	}
-
-	public boolean setCpf(String cpf) {
-		cpf = cpf.replaceAll("[^\\d]", "");
-
-		if (cpf.matches("\\d{11}")) {
-			this.cpf = cpf;
+	
+	public boolean setEndereco(String endereco) {
+		if (endereco.length() > 4) {
+			this.endereco = endereco;
 			return true;
 		}
 		return false;

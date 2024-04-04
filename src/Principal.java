@@ -15,19 +15,29 @@ public class Principal {
 		while (!pessoa1.setName(sc.nextLine())) {
 			System.out.println("Informe o NOME novamente: ");
 		}
-		System.out.println("Informe a IDADE: ");
-		while (!pessoa1.setIdade(sc.nextInt())) {
-			System.out.println("Informe a IDADE novamente: ");
+		System.out.println("Informe o ENDERECO: ");
+		while (!pessoa1.setEndereco(sc.nextLine())) {
+			System.out.println("Informe o ENDERECO novamente: ");
 		}
 
+		PessoaFisica pesFisica1 = new PessoaFisica();
+		
 		System.out.println("Informe o CPF: ");
-		while (!pessoa1.setCpf(sc.next())) {
+		while (!pesFisica1.setCpf(sc.next())) {
 			System.out.println("Informe o CPF nvamente: ");
 		}
-
+		
+		PessoaJuridica pesJuridica = new PessoaJuridica();
+		
+		System.out.println("Informe o CNPJ: ");
+		while (!pesJuridica.setCnpj(sc.next())) {
+			System.out.println("Informe o CNPJ nvamente: ");
+		}
+		
 		System.out.println("\nNome: "+pessoa1.getName()+
-				"\nIdade: "+pessoa1.getIdade()+
-				"\nCPF: "+pessoa1.getCpf());
+				"\nENDEREÇO: "+pessoa1.getEndereco()+
+				"\nCPF: "+pesFisica1.getCpf()+
+				"\nCNPJ: "+pesJuridica.getCnpj());
 	}
 
 }
