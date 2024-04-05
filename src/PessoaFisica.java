@@ -15,12 +15,8 @@ public class PessoaFisica extends Pessoa {
 	    }
 
 	    // Método para definir o CPF da pessoa física
-	    public boolean setCpf(String cpf) {
-	    	if (cpf.matches("^\\d{11}$")) {
-	        	this.cpf = cpf;
-	        	return true;
-	        }
-	        return false;
+	    public void setCpf(String cpf) {
+	    	this.cpf = cpf;	       	
 	    }
 
 	    // Método para exibir informações da pessoa física

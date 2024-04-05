@@ -9,30 +9,25 @@ public class Principal {
 
 		// Atribuindo valores as variáveis da Class Pessoa:
 
-		Pessoa pessoa1 = new Pessoa();
+		
 
 		System.out.println("Informe o NOME: ");
-		while (!pessoa1.setNome(sc.nextLine())) {
-			System.out.println("Informe o NOME novamente: ");
-		}
+		String nome = sc.nextLine();
+		
 		System.out.println("Informe o ENDERECO: ");
-		while (!pessoa1.setEndereco(sc.nextLine())) {
-			System.out.println("Informe o ENDERECO novamente: ");
-		}
-
-		PessoaFisica pesFisica1 = new PessoaFisica();
-
+		String endereco = sc.nextLine();
+		
 		System.out.println("Informe o CPF: ");
-		while (!pesFisica1.setCpf(sc.next())) {
-			System.out.println("Informe o CPF nvamente: ");
-		}
-
-		PessoaJuridica pesJuridica = new PessoaJuridica();
+		String cpf = sc.nextLine();
 
 		System.out.println("Informe o CNPJ: ");
-		while (!pesJuridica.setCnpj(sc.next())) {
-			System.out.println("Informe o CNPJ nvamente: ");
-		}
+		String cnpj = sc.nextLine();
+		
+		// Criar instâncias de pessoa1, pesFisica1 e pesJuridica
+		Pessoa pessoa1 = new Pessoa(nome, endereco);
+		PessoaFisica pesFisica1 = new PessoaFisica(nome, endereco, cpf);
+		PessoaJuridica pesJuridica = new PessoaJuridica(nome, endereco, cnpj);
+
 
 		System.out.println("\nNome: " + pessoa1.getNome() + "\nENDEREÇO: " + pessoa1.getEndereco() + "\nCPF: "
 				+ pesFisica1.getCpf() + "\nCNPJ: " + pesJuridica.getCnpj());

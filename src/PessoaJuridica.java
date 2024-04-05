@@ -15,12 +15,8 @@ public class PessoaJuridica extends Pessoa {
     }
 
     // Método para definir o CNPJ da pessoa jurídica
-    public boolean setCnpj(String cnpj) {
-        if (cnpj.matches("^\\d{14}$")) {
-        	this.cnpj = cnpj;
-        	return true;
-        }
-        return false;
+    public void setCnpj(String cnpj) {
+    	this.cnpj = cnpj;
     }
 
     // Método para exibir informações da pessoa jurídica
